@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Form validation</title>
+
+</head>
+<body>
+    <div class="formContainer">
+        <form id="form">        
+            <div class="formFields" >
+                <label for="name">Name</label>
+                <input type="text" placeholder="Your Name" id="name" required minlength="3" maxlength="100" autocomplete="off" name="name">
+            </div>
+
+            <div class="formFields">
+                <label for="phone">Phone</label>
+                <input type="tel" placeholder="03xx-xxxxxxx" id="phone" required maxlength="12" minlength="11" pattern="[0-9]{4}-[0-9]{7}" name="phoneno">
+            </div>
+
+            <div class="formFields">
+                <label for="Email">Email</label>
+                <input type="email" placeholder="usama57@gmail.com" id="Email" required  name="emailaddress">
+            </div>
+
+            <div class="formFields">
+                <label for="website">Website url</label>
+                <input type="url" placeholder="https//:myform.com" id="website" required name="websiteurl">
+            </div>
+
+            <div class="formFields">
+                <label for="password">password</label>
+                <input type="password" placeholder="password (min. 8 characters)" id="password" required pattern="(?=^.{8,12}$)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9]).*"
+                
+                title="one uppercase and atlest one numeric should entered max lenght 12" name="password1">
+            </div>
+            <div class="formFields">
+                <label for="confirmpassword">confirm password</label>
+                <input type="password" placeholder="Confirm password" id="confirmpassword" required pattern="(?=^.{8,12}$)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9]).*" title="password does not match" name="confirmationpassword">
+            </div>
+            <div class="formFields">
+                <button type="submit" id="submit"> Register yourself </button>
+            </div>
+            <div class="heading">
+
+                <h3 id="message">Registration!!!</h3>
+            </div>
+        
+        </form>
+            
+    </div>
+</body>
+</html>
